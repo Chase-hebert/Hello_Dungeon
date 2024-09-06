@@ -80,8 +80,7 @@ namespace Hello_Dungeon
             int input2 = threechoiceinput("Merchant options", "staff", "dagger", "stat");
             if (merchantBattle == false)
             {
-                while(input2 == 1 || input2 == 2 || input2 == 3 && input != 2)
-                Console.WriteLine("1|2|3");
+
             }
 
 
