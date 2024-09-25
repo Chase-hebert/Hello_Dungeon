@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle_Arema", "Battle_Arema\Battle_Arema.csproj", "{B2A096EB-D367-408C-8A5F-877E34233238}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B59E46DC-0325-4250-B3F9-B5C5B0FA6674}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2A096EB-D367-408C-8A5F-877E34233238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2A096EB-D367-408C-8A5F-877E34233238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2A096EB-D367-408C-8A5F-877E34233238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2A096EB-D367-408C-8A5F-877E34233238}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F25F09BB-A551-4899-8B17-A90C808AD83B}
+	EndGlobalSection
+EndGlobal
