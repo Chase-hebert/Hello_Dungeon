@@ -44,21 +44,12 @@ namespace Battle_Arema
         public void TakeDamage(float damage)
         {
             Health -= damage;
-            if (Health == 0)
-            {
-                Die();
-            }
         }
 
         public void Heal(float health)
         {
             Health += health;
         }
-        public void Die()
-        {
-            Console.WriteLine(Name + "has died!!");
-        }
-
         public void PrintStats()
         {
             Console.WriteLine("Name: " + Name);
