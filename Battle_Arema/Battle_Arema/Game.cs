@@ -43,13 +43,15 @@ namespace Battle_Arema
             Character player;
             Character enemy;
 
+            
             private bool _gameOver = false;
 
+        public bool GameOver { get => _gameOver; set => _gameOver = value; }
 
-            private void Start()
+        private void Start()
             {
             player = new Character(name: "Player", maxHealth: 100, attackPower: 10, defensePower: 5);
-            enemy = new Character(name: "Blimbo", maxHealth: 100, attackPower: 8, defensePower: 3);
+            enemy = new Character(name: "Blimbo", maxHealth: 100, attackPower: 300, defensePower: 3);
             player.PrintStats();
             Console.WriteLine();
             enemy.PrintStats();
@@ -63,27 +65,58 @@ namespace Battle_Arema
             Console.WriteLine();
             enemy.PrintStats();
 
-            //Timer to clear the console screen to make it nicer
-            Thread.Sleep(5000);
+            Console.ReadKey();
             Console.Clear();
             }
 
             private void Update()
             {
             float damage = enemy.Attack(player);
-            Console.WriteLine(enemy.Name + " Retaliates and attacks player dealing " + damage + " damage to" + player.Name);
+
+
+            Console.WriteLine(enemy.Name + " Retaliates and attacks player dealing " + damage + " damage to " + player.Name);
+            CheckIfDead();
             Console.ReadKey();
+
+            
             }
+
+        public bool CheckIfDead()
+        {
+            bool isDead = false;
+            if (player.Health == 0)
+            {
+                isDead = true;
+                GameOver = true;
+            }
+            else
+            {
+                isDead = false;
+            }
+            return isDead;
+        }
 
             private void End()
             {
-             
+             Console.Clear();
+             Console.WriteLine("You Died");
+             Console.WriteLine("\nGame Over");
+             int playerRetries = Getinput("do you wish to retry", "Yes", "no");
+             if (playerRetries == 1)
+              {
+                GameOver = false;
+                Run();
+              }
+             else
+              {
+                Console.Clear();
+              }
             }
 
         public void Run()
         {
             Start();
-            while (!_gameOver)
+            while (!GameOver)
             {
                 Update();
             }
