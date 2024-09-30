@@ -8,13 +8,13 @@ namespace Battle_Arema
 {
     internal class Character
     {
-        private string _name = "Character";
+        private string _enemyName = "Character";
         private float _health = 100;
         private float _maxHealth = 100;
         private float _attackPower = 1;
         private float _defensePower = 1;
 
-        public string Name {get { return _name; } }
+        public string Name {get { return _enemyName; } }
         public float MaxHealth { get { return _maxHealth; } }
         public float Health
         {
@@ -25,9 +25,10 @@ namespace Battle_Arema
         public float AttackPower { get { return _attackPower; } }
         public float DefensePower { get { return _defensePower; } }
 
-        public Character(string name, float maxHealth, float attackPower, float defensePower)
+        public Character(string playerName, string enemyName, float maxHealth, float attackPower, float defensePower)
         {
-            _name = name;
+            playerName = PlayerName();
+            _enemyName = enemyName;
             _maxHealth = maxHealth;
             _health = maxHealth;
             _attackPower = attackPower;
@@ -56,6 +57,17 @@ namespace Battle_Arema
             Console.WriteLine("Health: " + Health + "/" + MaxHealth);
             Console.WriteLine("Attack Power: " + AttackPower);
             Console.WriteLine("Defense Power: " + DefensePower);
+        }
+
+        public string PlayerName()
+        {
+            string playerName = Console.ReadLine();
+            while (playerName.Length > 12 == true)
+            {
+                playerName = Console.ReadLine();
+                Console.WriteLine("Your name is too long try again");
+            }
+            return playerName;
         }
     }
 }
