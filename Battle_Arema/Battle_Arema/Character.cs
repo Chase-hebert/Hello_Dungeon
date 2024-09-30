@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Formats.Asn1;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Battle_Arema
 {
     internal class Character
     {
+        private string _name = "";
         private string _enemyName = "Character";
         private float _health = 100;
         private float _maxHealth = 100;
@@ -25,9 +27,9 @@ namespace Battle_Arema
         public float AttackPower { get { return _attackPower; } }
         public float DefensePower { get { return _defensePower; } }
 
-        public Character(string playerName, string enemyName, float maxHealth, float attackPower, float defensePower)
+        public Character(string name, string enemyName, float maxHealth, float attackPower, float defensePower)
         {
-            playerName = PlayerName();
+            name = PlayerName();
             _enemyName = enemyName;
             _maxHealth = maxHealth;
             _health = maxHealth;
@@ -61,6 +63,7 @@ namespace Battle_Arema
 
         public string PlayerName()
         {
+            Console.WriteLine("Enter your Name");
             string playerName = Console.ReadLine();
             while (playerName.Length > 12 == true)
             {
