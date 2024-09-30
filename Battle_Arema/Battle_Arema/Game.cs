@@ -50,8 +50,8 @@ namespace Battle_Arema
 
         private void Start()
             {
-            player = new Character(name: "Player", maxHealth: 100, attackPower: 10, defensePower: 5);
-            enemy = new Character(name: "Blimbo", maxHealth: 100, attackPower: 300, defensePower: 3);
+            player = new Character(playerName: "", enemyName: "", maxHealth: 100, attackPower: 10, defensePower: 5); 
+            enemy = new Character(playerName: "", enemyName: "Blimbo", maxHealth: 100, attackPower: 8, defensePower: 3);
             player.PrintStats();
             Console.WriteLine();
             enemy.PrintStats();
