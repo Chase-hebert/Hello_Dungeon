@@ -10,7 +10,6 @@ namespace Hello_Dungeon
     {
         public void Run()
         {
-            Console.Beep();
             Console.WriteLine("hello what is your name");
             string playerName = Console.ReadLine();
             {
@@ -49,13 +48,14 @@ namespace Hello_Dungeon
             {
                 playerRole = "Pyromancer";
             }
+            // entering the dungeon
                 Console.WriteLine("you have now picked your class " + playerRole);
                 Console.WriteLine();
                 Console.WriteLine("You now enter the dungeon and are now greeted by an elderly merchant,");
                 Console.WriteLine();
                 Console.WriteLine("Hello traveler would you like to peruse my goods");
                 Console.Write("yes|no");
-                // merchant options and code for battle
+                // merchant options for each class/role and code for battle no code at this point
                 bool merchantBattle = false;
                 input = getinput("Yes or No", "yes", "no");
                 {
@@ -77,10 +77,11 @@ namespace Hello_Dungeon
                     Console.WriteLine("YOU HAVE CHOSEN POORLY");
                     merchantBattle = true;
                 }
-            int input2 = threechoiceinput("Merchant options", "staff", "dagger", "stat");
+                // work in progress
+            int input2 = ThreeChoiceInput("Merchant options", "staff", "dagger", "stat");
             if (merchantBattle == false)
             {
-
+                
             }
 
 
@@ -133,7 +134,7 @@ namespace Hello_Dungeon
         return inputreceived;
     }
 
-        int threechoiceinput(string description, string option1, string option2, string option3)
+        int ThreeChoiceInput(string description, string option1, string option2, string option3)
         {
             string input = "";
             int inputreceived = 0;
